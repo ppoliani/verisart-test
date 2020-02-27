@@ -21,6 +21,11 @@ Go to `src/js` and type:
 - `node main.js` 
 - `node main-rec.js`
 
+To run the test:
+
+- `yarn install or npm install`
+- `yarn test or npm run test`
+
 To run the Go implementation:
 
 Go to `src/go` and type:
