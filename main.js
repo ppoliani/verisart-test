@@ -11,7 +11,7 @@ const getOperator = op => {
     case 'sha256':
       return sha256;
     default:
-      throw new Error('Operation unavailable');
+      throw new Error('Operator not supported!');
   }
 }
 

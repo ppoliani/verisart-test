@@ -11,12 +11,13 @@ const getOperator = op => {
     case 'sha256':
       return sha256;
     default:
-      throw new Error('Operation unavailable');
+      throw new Error('Operator not supported!');
   }
 }
 
 const verifyHash = (operations, msg, merkleRoot) => {
   const rec = (operation, root) => {
+    console.log('>>>>>>>', root)
     if(operation === undefined) {
       return convertToBigEndian(root) === merkleRoot;
     }
