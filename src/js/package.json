@@ -1,0 +1,13 @@
+{
+  "name": "verisart-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ppoliani <ppoliani@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "node_modules/.bin/ava **/*.test.js"
+  },
+  "devDependencies": {
+    "ava": "^3.4.0"
+  }
+}
