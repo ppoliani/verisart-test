@@ -26,3 +26,6 @@ To run the Go implementation:
 Go to `src/go` and type:
 
 - `go run main.go` 
+
+
+There are no comments in the code because I tend to write tiny function that have a single responsibility and a self-explanatory name; thus additional comments can be sometimes confusing.
