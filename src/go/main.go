@@ -11,13 +11,13 @@ import (
 
 type Timestamp struct {
 	Operator string
-	Prefix string 
-	Postfix string 
+	Prefix   string
+	Postfix  string
 }
 
 func getOperator(op string) func(data []byte) [32]byte {
 	switch op {
-	case "sha256": 
+	case "sha256":
 		return sha256.Sum256
 	default:
 		panic("Operator not supported!")
@@ -31,7 +31,7 @@ func convertToString(v [32]byte) string {
 func fromHex(str string) []byte {
 	val, _ := hex.DecodeString(str)
 
-	return val;
+	return val
 }
 
 func convertToBigEndian(message string) string {
@@ -59,7 +59,7 @@ func VerifyHash(timestamps []Timestamp, message string, merkleRoot string) bool 
 }
 
 func convertTuplesToTimestamps(tuples [][]string) []Timestamp {
-	s := []Timestamp {}
+	s := []Timestamp{}
 	for _, elem := range tuples {
 		s = append(s, Timestamp{elem[0], elem[1], elem[2]})
 	}
@@ -67,7 +67,7 @@ func convertTuplesToTimestamps(tuples [][]string) []Timestamp {
 	return s
 }
 
-func main(){
+func main() {
 	msg := "b4759e820cb549c53c755e5905c744f73605f8f6437ae7884252a5f204c8c6e6"
 	merkleRoot := "f832e7458a6140ef22c6bc1743f09610281f66a1b202e7b4d278b83de55ef58c"
 
