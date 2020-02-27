@@ -15,7 +15,6 @@ type Timestamp struct {
 	Postfix string 
 }
 
-
 func getOperator(op string) func(data []byte) [32]byte {
 	switch op {
 	case "sha256": 
@@ -47,8 +46,6 @@ func convertToBigEndian(message string) string {
 	return hex.EncodeToString(reversed)
 }
 
-// This function should walk through the timestamps and verify message against merkleRoot
-// Hints: use crypto/sha256 and encoding/hex. message is big-endian while merkleRoot is little-endian.
 func VerifyHash(timestamps []Timestamp, message string, merkleRoot string) bool {
 	if len(timestamps) == 0 {
 		return strings.EqualFold(convertToBigEndian(message), merkleRoot)
@@ -81,7 +78,6 @@ func main(){
 	}
 
 	tuples := [][]string{}
-	// timestamps := []Timestamp{}
 
 	// Convert byte slice to slice of tuples
 	json.Unmarshal(dat, &tuples)
