@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 const assert = require('assert');
-const timestamp = require('./timestamp.json');
+const timestamp = require('../../timestamp.json');
 
 const sha256 = payload => crypto.createHash('sha256')
   .update(payload)

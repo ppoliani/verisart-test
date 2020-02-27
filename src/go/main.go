@@ -71,7 +71,7 @@ func main(){
 	msg := "b4759e820cb549c53c755e5905c744f73605f8f6437ae7884252a5f204c8c6e6"
 	merkleRoot := "f832e7458a6140ef22c6bc1743f09610281f66a1b202e7b4d278b83de55ef58c"
 
-	filePath := "./timestamp.json"
+	filePath := "../../timestamp.json"
 	dat, err := ioutil.ReadFile(filePath)
 	if err != nil {
 		return

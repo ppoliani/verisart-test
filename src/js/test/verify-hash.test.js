@@ -1,5 +1,6 @@
 const test = require('ava');
-const timestamp = require('./timestamp.json');
+const {verifyHash} = require('../main')
+const timestamp = require('../../../timestamp.json');
 
 test('should return true if the path is correct',  t => {
   const msg = 'b4759e820cb549c53c755e5905c744f73605f8f6437ae7884252a5f204c8c6e6';
